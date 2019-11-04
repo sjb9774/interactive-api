@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ super() }} - Home Page{% endblock %}
+{% block head %}
+	<script src="static/js/home/main.js" type="module"></script>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/home/home.css') }}">
+{% endblock %}
+{% block body %}
+	<h1>{{ view_model.get_welcome_message() }}</h1>
+	<div class="request-section">
+		<button>Create New Request Flow</button>
+	</div>
+{% endblock %}
