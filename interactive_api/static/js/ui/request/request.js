@@ -49,7 +49,7 @@ export class RequestCreator extends Component {
 	}
 
 	addRequest() {
-		var requestComponent = new RequestComponent();
+		const requestComponent = new RequestComponent();
 		requestComponent.render().then(function(requestRoot) {
 			this.getRootNode().querySelector('.requests-container').appendChild(requestRoot);
 		}.bind(this));

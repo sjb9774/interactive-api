@@ -53,6 +53,10 @@ export class Component {
 		return node;
 	}
 
+	/**
+	 *
+	 * @returns {Promise<T>}
+	 */
 	render() {
 		return this.loadTemplate().then(function (templateContent) {
 			let temp = document.createElement('template');
